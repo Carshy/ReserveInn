@@ -12,15 +12,23 @@ class Location(models.Model):
         ('Berlin', 'Berlin'),
         ('Paris', 'Paris'),
     ]
-    city = models.CharField(max_length=50, choices=CITY_CHOICES)
+    city = models.CharField(max_length=50, choices=CITY_CHOICES, null=False)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.city
 
 class Hotel(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, null=False)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     description = models.TextField()
+    address = models.CharField(max_length=255, null='True')
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    email = models.EmailField(max_length=255, null=True, blank=True)
+    photo = models.ImageField(upload_to='hotel_photos/', blank=True, null=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
@@ -36,6 +44,8 @@ class Room(models.Model):
     room_number = models.CharField(max_length=10)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     is_available = models.BooleanField(default=True)
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f'{self.room_type} - {self.number}'
