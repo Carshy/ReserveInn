@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 class Location(models.Model):
@@ -23,8 +24,8 @@ class Hotel(models.Model):
     name = models.CharField(max_length=100, null=False)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
     description = models.TextField()
-    address = models.CharField(max_length=255, null='True')
-    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    address = models.CharField(max_length=255, null=True)
+    phone_number = PhoneNumberField(null=True, blank=True)
     email = models.EmailField(max_length=255, null=True, blank=True)
     photo = models.ImageField(upload_to='hotel_photos/', blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now)
