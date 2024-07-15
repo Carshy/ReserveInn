@@ -8,13 +8,9 @@ class LocationSerializer(serializers.ModelSerializer):
         fields = ['id', 'city']
 
 class HotelSerializer(serializers.ModelSerializer):
-    location_id = serializers.PrimaryKeyRelatedField(
-        queryset=Location.objects.all(), source='location', write_only=True)
-    location = LocationSerializer(read_only=True)
-
     class Meta:
         model = Hotel
-        fields = ['id', 'name', 'location_id', 'location', 'description', 'address', 'phone_number', 'photo', 'email']
+        fields = ['id', 'name', 'location', 'description', 'address', 'phone_number', 'photo', 'email', 'created_at', 'updated_at']
 
 class RoomSerializer(serializers.ModelSerializer):
     hotel = HotelSerializer()
