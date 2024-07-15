@@ -24,3 +24,18 @@ class Hotel(models.Model):
 
     def __str__(self):
         return self.name
+
+class Room(models.Model):
+    ROOM_TYPE_CHOICES = [
+        ('Single', 'Single'),
+        ('Double', 'Double'),
+        ('Suite', 'Suite'),
+    ]
+    hotel = models.ForeignKey(Hotel, related_name='rooms', on_delete=models.CASCADE)
+    room_type = models.CharField(max_length=50, choices=ROOM_TYPE_CHOICES)
+    number = models.CharField(max_length=10)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    available = models.BooleanField(default=True)
+
+    def __str__(self):
+        return f'{self.room_type} - {self.number}'
