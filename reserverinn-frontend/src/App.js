@@ -1,10 +1,19 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Navbar } from './Navigations';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Collins Welcome back to react JS! This project is going to change your life</h1>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          {/* <Route path="/" element={<Home />} />
+          <Route path="/books" element={<SearchList />} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
