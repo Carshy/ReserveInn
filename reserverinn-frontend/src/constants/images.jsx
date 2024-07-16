@@ -10,6 +10,8 @@ import image7 from '../assets/image7.webp';
 import image8 from '../assets/image8.webp';
 import image9 from '../assets/image9.webp';
 import image10 from '../assets/image10.webp';
+import kemp from '../assets/kemp.jpg';
+import kemp1 from '../assets/kemp1.jpg';
 
 export default {
   logo,
@@ -24,4 +26,6 @@ export default {
   image8,
   image9,
   image10,
+  kemp,
+  kemp1
 };

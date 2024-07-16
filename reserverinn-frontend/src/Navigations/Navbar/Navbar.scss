@@ -8,7 +8,7 @@
   background: transparent;
   position: fixed;
   z-index: 10;
-  background: #fff;
+  background: transparent;
 
   // position: sticky;
   top: 0px;
@@ -52,11 +52,11 @@
         font-size: 1.25rem;
         text-decoration: none;
         text-transform: uppercase;
-        color: var(--color-brown-50);
+        color: #fff;
         transition: color 100ms ease, background-color 100ms ease;
 
         &.active {
-          color: var(--color-brown);
+          color: #fff;
         }
 
         &.hover {
@@ -99,7 +99,7 @@
 
     a {
       color: var(--white-color);
-      color: #15023a;
+      color: #fff;
       flex-direction: column;
       text-transform: uppercase;
       font-weight: 500;
