@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
+// import { images } from '../../constants';
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -23,9 +23,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className={fix ? 'nav__container fixed' : 'nav__container'}>
-        <div className="app__navbar-logo">
+        {/* <div className="app__navbar-logo">
           <img src={images.logo} alt="App Logo" />
-        </div>
+        </div> */}
 
         <ul className="app__navbar-links">
           <li>

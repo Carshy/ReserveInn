@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { images } from '../../constants';
-import './HomeSlider.scss'; 
+import './HomeSlider.scss';
 
 const HomeSlider = () => {
   const settings = {
@@ -19,6 +19,21 @@ const HomeSlider = () => {
 
   return (
     <Slider {...settings} className="slider">
+      <div className="slide">
+        <video autoPlay loop muted className="full-viewport">
+          <source src={images.kemp5} type="video/mp4" />
+        </video>
+      </div>
+      <div className="slide">
+        <video autoPlay loop muted className="full-viewport">
+          <source src={images.kemp4} type="video/mp4" />
+        </video>
+      </div>
+      <div className="slide">
+        <video autoPlay loop muted className="full-viewport">
+          <source src={images.kemp2} type="video/mp4" />
+        </video>
+      </div>
       <div className="slide">
         <img src={images.kemp} alt="kempinski" />
       </div>

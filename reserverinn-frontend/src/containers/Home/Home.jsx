@@ -8,7 +8,7 @@ function Home() {
       {/* <h1>Welcome to ReserveInn</h1> */}
       <HomeSlider />
     </div>
-  )
+  );
 }
 
 export default Home;

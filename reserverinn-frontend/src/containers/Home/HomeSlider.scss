@@ -1,70 +1,50 @@
-// /* HomeSlider.css */
-// .slick-slide {
-//   position: relative;
-// }
+.slider {
+  // position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
 
-// .slick-list, .slick-track, .slick-slide > div {
-//     height: 100vh; /* Set slider height to full viewport height */
-//   }
-  
-//   .full-viewport {
-//     width: 100vw; /* Full viewport width */
-//     height: 100vh; /* Full viewport height */
-//     object-fit: cover; /* Ensure the content covers the entire area */
-//   }
-
-// .slick-slide:before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(
-//     255,
-//     255,
-//     255,
-//     0.7
-//   ); /* Adjust opacity and color as needed */
-//   animation: flash 2s linear infinite alternate;
-// }
-
-// @keyframes flash {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-
-/* HomeSlider.scss */
 .slick-slide {
-    position: relative;
-    height: 100vh; /* Full viewport height */
-  }
-  
-  .slick-list, .slick-track {
-    height: 100vh; /* Full viewport height */
-  }
-  
-  .slide {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+}
 
-    img {
+.slick-list,
+.slick-track {
+  height: 100vh; /* Full viewport height */
+}
+
+.slide {
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // position: absolute;
+
+  // opacity: 0;
+
+  img {
+    width: 100%;
+  }
+
+  video {
+    source {
       width: 100%;
     }
   }
-  
-  .full-viewport {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain; /* Maintain aspect ratio and prevent distortion */
-  }
-  
+}
+
+// .full-viewport {
+//   max-width: 100%;
+//   max-height: 100%;
+//   width: auto;
+//   height: auto;
+//   object-fit: contain; /* Maintain aspect ratio and prevent distortion */
+// }

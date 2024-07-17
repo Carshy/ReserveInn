@@ -12,6 +12,10 @@ import image9 from '../assets/image9.webp';
 import image10 from '../assets/image10.webp';
 import kemp from '../assets/kemp.jpg';
 import kemp1 from '../assets/kemp1.jpg';
+import kemp2 from '../assets/videos/kemp2.mp4';
+import kemp4 from '../assets/videos/kemp4.mp4';
+import kemp5 from '../assets/videos/kemp5.mp4';
+import kemp6 from '../assets/videos/kemp6.mp4';
 
 export default {
   logo,
@@ -27,5 +31,9 @@ export default {
   image9,
   image10,
   kemp,
-  kemp1
+  kemp1,
+  kemp2,
+  kemp4,
+  kemp5,
+  kemp6,
 };
