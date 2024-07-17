@@ -26,14 +26,18 @@
     justify-content: flex-start;
     align-items: center;
 
-    img {
-      width: 140px;
-      height: 40px;
+    // img {
+    //   width: 140px;
+    //   height: 40px;
 
-      @media screen and (min-width: 2000px) {
-        width: 180px;
-        height: 40px;
-      }
+    //   @media screen and (min-width: 2000px) {
+    //     width: 180px;
+    //     height: 40px;
+    //   }
+    // }
+    h2 {
+      color: #fff;
+      font-weight: 600;
     }
   }
 

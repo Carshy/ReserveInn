@@ -23,9 +23,10 @@ const Navbar = () => {
   return (
     <div>
       <nav className={fix ? 'nav__container fixed' : 'nav__container'}>
-        {/* <div className="app__navbar-logo">
-          <img src={images.logo} alt="App Logo" />
-        </div> */}
+        <div className="app__navbar-logo">
+          <h2>Reserve Inn</h2>
+          {/* <img src={images.logo} alt="App Logo" /> */}
+        </div>
 
         <ul className="app__navbar-links">
           <li>
