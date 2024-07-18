@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 import { fetchHotels } from '../../redux/reducers/hotelSlice';
 import './Hotel.scss';
 
@@ -23,14 +24,24 @@ const Hotels = () => {
       {hotelError && <p>Error: {hotelError}</p>}
       <div className="app__hotels-card">
         {hotels.map((hotel) => (
-          <ul key={hotel.id}>
-            <li className="app__hotels-details">
+          <motion.ul
+            key={hotel.id}
+          >
+            <motion.li 
+              className="app__hotels-details"
+              whileInView={{ opacity: [0, 1], scale: [0, 1] }}
+              transition={{
+                duration: 0.4,
+                ease: 'easeInOut',
+                staggerChildren: 0.45,
+              }}
+            >
               <img src={hotel.photo} alt="Hotel Photo" />
               <h2>{hotel.name}</h2>
               <p>{hotel.location}</p>
               <p>{hotel.description}</p>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         ))}
       </div>
     </div>
