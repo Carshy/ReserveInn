@@ -1,0 +1,35 @@
+.app__hotels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  width: 100%;
+
+  .app__hotels-title {
+    font-weight: 600;
+  }
+
+  .app__hotels-card {
+    display: flex;
+    width: 100%;
+
+    // padding: 3rem 2rem 0 2rem;
+    gap: 3rem;
+    ul {
+    //   display: flex;
+      
+      .app__hotels-details {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        height: 100vh;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
