@@ -17,7 +17,7 @@ const Hotels = () => {
   }, [hotelStatus, dispatch]);
 
   return (
-    <div className="app__hotels">
+    <div className="app__hotels" id="hotels">
       <h2 className="app__hotels-title">Destinations</h2>
       <p>Explore the World with Reserve Inn. Where are you Travelling Next?</p>
       {hotelStatus === 'loading' && <p>Loading...</p>}
