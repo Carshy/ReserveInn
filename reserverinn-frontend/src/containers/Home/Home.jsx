@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeSlider from './HomeSlider';
 import Hotels from '../Hotels/Hotels';
+import Rooms from '../Rooms/Rooms';
 import './Home.scss';
 
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
       {/* <h1>Welcome to ReserveInn</h1> */}
       <HomeSlider />
       <Hotels />
+      <Rooms />
     </div>
   );
 }
