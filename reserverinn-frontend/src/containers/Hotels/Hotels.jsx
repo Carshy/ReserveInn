@@ -29,7 +29,7 @@ const Hotels = () => {
           >
             <motion.li 
               className="app__hotels-details"
-              whileInView={{ opacity: [0, 1], scale: [0, 1] }}
+              whileInView={{ opacity: [0, 1] }}
               transition={{
                 duration: 0.2,
                 ease: 'easeInOut',
