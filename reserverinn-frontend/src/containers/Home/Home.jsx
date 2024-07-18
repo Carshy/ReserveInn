@@ -5,7 +5,7 @@ import './Home.scss';
 
 function Home() {
   return (
-    <div>
+    <div className="app__home">
       {/* <h1>Welcome to ReserveInn</h1> */}
       <HomeSlider />
       <Hotels />

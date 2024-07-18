@@ -21,7 +21,7 @@ const Navbar = () => {
   window.addEventListener('scroll', navScroll);
 
   return (
-    <div>
+    <div className="app__nav">
       <nav className={fix ? 'nav__container fixed' : 'nav__container'}>
         <div className="app__navbar-logo">
           <h2>Reserve Inn</h2>
