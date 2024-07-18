@@ -31,9 +31,8 @@ const Hotels = () => {
               className="app__hotels-details"
               whileInView={{ opacity: [0, 1], scale: [0, 1] }}
               transition={{
-                duration: 0.4,
+                duration: 0.2,
                 ease: 'easeInOut',
-                staggerChildren: 0.45,
               }}
             >
               <img src={hotel.photo} alt="Hotel Photo" />

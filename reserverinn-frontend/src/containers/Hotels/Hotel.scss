@@ -10,7 +10,9 @@
   overflow-y: hidden;
 
   .app__hotels-title {
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
   }
 
   .app__hotels-card {
@@ -54,28 +56,11 @@
         position: relative;
         overflow: hidden;
 
-        // width: calc((100% / 3));
-        // scroll-snap-align: start;
-
-        // padding: 10px;
-        // text-align: center;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        // background-color: rgba(0, 0, 0, 0.2);
-        // transition: all 0.3s ease;
-        // z-index: 3;
-
         img {
           width: 100%;
           height: 100%;
 
           position: absolute;
-          // transition: opacity 0.3s ease-in-out;
-          // top: 0;
-          // left: 0;
-          // object-fit: cover;
           z-index: 1;
         }
 
@@ -99,9 +84,6 @@
           color: white;
           margin: 0;
           padding: 0.5rem;
-          // font-family: 'Lobster', cursive;
-          // background: rgba(0, 0, 0, 0.5);
-          // transition: opacity 0.3s ease-in-out;
         }
 
         h2 {
@@ -110,7 +92,6 @@
           transform: rotate(45deg);
           font-weight: 900;
           font-size: 2.4rem;
-          // transform: translate(-50%, -50%) rotate(45deg);
         }
 
         p {
@@ -120,8 +101,6 @@
         }
 
         &:hover {
-          transform: scale(2);
-
           cursor: pointer;
 
           &::before {

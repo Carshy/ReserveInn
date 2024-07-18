@@ -34,9 +34,9 @@ const HomeSlider = () => {
           <source src={images.kemp2} type="video/mp4" />
         </video>
       </div>
-      <div className="slide">
+      {/* <div className="slide">
         <img src={images.kemp} alt="kempinski" />
-      </div>
+      </div> */}
       <div className="slide">
         <img src={images.kemp1} alt="kempinski" />
       </div>
