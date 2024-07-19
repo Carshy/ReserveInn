@@ -32,24 +32,25 @@ const Rooms = () => {
 
   return (
     <div className="app__rooms">
-      <h2 className="app__rooms-title">Sensational Suites</h2>
+      <h2 className="app__rooms-title"> Our Exquisite Suites</h2>
       <p>Elevate your travel experience when you step into one of our show-stopping suites</p>
       {roomStatus === 'loading' && <p>Loading...</p>}
       {roomError && <p>Error: {roomError}</p>}
       <motion.div
         className="app__slider"
-        initial={{ width: '94%' }}
-        whileHover={{ width: '100%' }}
+        initial={{ scale: 1 }}
+        whileHover={{ scale: 1.06 }}  // Adjust the scale value as needed
         transition={{ duration: 0.5 }}
-        // whileInView={{ opacity:[0.4, 1], scale:[0, 1] }}
       >
         <Slider {...settings} className="slider">
           {rooms.map((room) => (
             <div key={room.id} className="slide">
               <img src={room.photo} alt={room.name} />
-              <h2>{room.room_type}</h2>
-              <p>{room.hotel.name}</p>
-              <p>{room.description}</p>
+              <div className="slide-content">
+                <h2>Sensational {room.room_type}</h2>
+                <p>{room.hotel.name}</p>
+                <p>{room.description}</p>
+              </div>
             </div>
           ))}
         </Slider>
