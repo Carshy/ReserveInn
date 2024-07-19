@@ -1,0 +1,148 @@
+.slider {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  // Responsive adjustments
+  @media screen and (max-width: 768px) {
+    height: 60vh; // Reduce height on small screens
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 50vh; // Further reduce height on extra-small screens
+  }
+}
+
+.slick-slide {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+
+  @media screen and (max-width: 768px) {
+    height: 60vh; // Adjust height for small screens
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 50vh; // Further adjust height for extra-small screens
+  }
+}
+
+.slick-list,
+.slick-track {
+  height: 100vh; /* Full viewport height */
+
+  @media screen and (max-width: 768px) {
+    height: 60vh; // Adjust height for small screens
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 50vh; // Further adjust height for extra-small screens
+  }
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  flex-direction: column;
+
+  h1,
+  p {
+    top: 30%;
+    position: relative;
+    color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; // Center text
+  }
+
+  h1 {
+    margin-bottom: 1rem; /* Adds space between h1 and p */
+    font-size: 5rem; /* Adjust font size as needed */
+
+    @media screen and (max-width: 768px) {
+      font-size: 3rem; // Adjust font size for small screens
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 2rem; // Further adjust font size for extra-small screens
+    }
+  }
+
+  p {
+    font-size: 2rem; // Adjust font size as needed
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem; // Adjust font size for small screens
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 1rem; // Further adjust font size for extra-small screens
+    }
+  }
+
+  video.full-viewport,
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Dark overlay
+    z-index: 1;
+  }
+}
+
+// *******************************************************************
+.app__wave {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 4;
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .blinking-arrow {
+    animation: blink 1.5s infinite;
+    font-size: 3rem;
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+      font-size: 2rem; // Adjust arrow size for small screens
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 1.5rem; // Further adjust arrow size for extra-small screens
+    }
+  }
+}

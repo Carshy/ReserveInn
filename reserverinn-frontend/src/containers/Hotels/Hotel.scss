@@ -1,0 +1,128 @@
+.app__hotels {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+  width: 96%;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .app__hotels-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  .app__hotels-intro {
+    @media screen and (max-width: 750px) {
+      text-align: center;
+    }
+  }
+
+  .app__hotels-card {
+    display: flex;
+    width: 100%;
+    gap: 1.5rem;
+
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 3rem 2rem 0 2rem;
+    height: calc(100vh - 6rem);
+    // scroll-snap-type: x mandatory;
+
+    /* Scrollbar styles */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 transparent; /* Firefox */
+
+    &::-webkit-scrollbar {
+      height: 8px; /* Adjust the height of the scrollbar */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; /* Color of the scrollbar thumb */
+      border-radius: 10px; /* Rounding the edges of the thumb */
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* Background of the scrollbar track */
+    }
+
+    .app__hotels-cards {
+      display: flex;
+      flex-direction: column;
+
+      .app__hotels-details {
+        display: flex;
+        flex-direction: column;
+        width: 24rem;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          position: absolute;
+          z-index: 1;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.2);
+          z-index: 2;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+        }
+
+        h2,
+        p {
+          position: absolute;
+          z-index: 3;
+          color: white;
+          margin: 0;
+          padding: 0.5rem;
+        }
+
+        h2 {
+          top: 20%;
+          opacity: 1;
+          transform: rotate(45deg);
+          font-weight: 900;
+          font-size: 2.4rem;
+        }
+
+        p {
+          bottom: 10%;
+          text-align: start;
+          opacity: 0;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          &::before {
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 1; /* Show background overlay on hover */
+          }
+
+          p {
+            opacity: 1; /* Show description on hover */
+          }
+
+          h2 {
+            transform: rotate(0deg); /* Normal text on hover */
+          }
+        }
+      }
+    }
+  }
+}

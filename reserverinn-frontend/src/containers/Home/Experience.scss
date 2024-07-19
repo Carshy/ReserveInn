@@ -1,0 +1,57 @@
+.app__experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 4rem 5rem 4rem;
+  gap: 2rem;
+  background-color: rgb(248 246 240);
+  //   background-color: #b5a191;
+
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+
+  .app__experience-title {
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
+  }
+
+  .app__experience-details {
+    h2 {
+      padding-bottom: 2.4rem;
+    }
+
+    p {
+      padding-bottom: 2rem;
+      color: rgba(0, 0, 0, 0.7);
+      line-height: 2.625rem;
+    }
+
+    @media screen and (max-width: 750px) {
+      h2 {
+        display: none;
+      }
+      p {
+        padding-bottom: 1rem; // Reduce padding on mobile
+        font-size: 1.6rem; // Smaller font size for mobile
+      }
+    }
+  }
+
+  .app__experience-image {
+    width: 55rem;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 100%; // Ensure image takes full width on mobile
+      margin-bottom: 2rem; // Add some space between image and text on mobile
+    }
+  }
+}
