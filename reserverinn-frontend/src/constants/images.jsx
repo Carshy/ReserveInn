@@ -18,6 +18,8 @@ import kemp5 from '../assets/videos/kemp5.mp4';
 import kemp6 from '../assets/videos/kemp6.mp4';
 import kempi from '../assets/kempi.jpg';
 import shakes from '../assets/shakes.svg';
+import abouthom from '../assets/abouthom.jpg';
+import abouthom1 from '../assets/abouthom1.jpg';
 
 export default {
   logo,
@@ -39,5 +41,7 @@ export default {
   kemp5,
   kemp6,
   kempi,
-  shakes
+  shakes,
+  abouthom,
+  abouthom1
 };

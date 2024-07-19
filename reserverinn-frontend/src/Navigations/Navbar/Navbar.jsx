@@ -31,6 +31,7 @@ const Navbar = () => {
         <ul className="app__navbar-links">
           <li>
             <NavLink
+              className="app__navbar-links-a"
               to="/"
               onClick={() => setNavActive(false)}
             >
@@ -39,6 +40,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
+              className="app__navbar-links-a"
               to="/abouts"
               onClick={() => setNavActive(false)}
             >
@@ -60,6 +62,7 @@ const Navbar = () => {
               <ul className="nav__links">
                 <li>
                   <NavLink
+                    className="nav-links-color"
                     to="/"
                     onClick={() => setToggle(false)}
                   >
@@ -68,10 +71,10 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/books"
+                    to="/abouts"
                     onClick={() => setToggle(false)}
                   >
-                    Search for Books
+                    About Us
                   </NavLink>
                 </li>
               </ul>

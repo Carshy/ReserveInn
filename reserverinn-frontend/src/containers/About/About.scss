@@ -1,0 +1,155 @@
+.app__abouts {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    align-items: center;
+  
+    .app__abouts-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+  
+    .app__hotels-intro {
+      font-size: 1.25rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+  
+    .app__abouts-card {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding-top: 3rem;
+  
+      .app__abouts-cards {
+        width: 100%;
+        display: flex;
+        gap: 2rem;
+  
+        .app__abouts-details {
+          display: flex;
+          gap: 6rem;
+          align-items: center;
+  
+          .about-image {
+            width: 25rem;
+            height: auto;
+  
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 8px;
+              object-fit: cover;
+            }
+          }
+  
+          .about-details {
+            flex: 1;
+  
+            h2 {
+              font-size: 1.75rem;
+              font-weight: 500;
+              margin: 0.5rem 0;
+            }
+  
+            p {
+              font-size: 1rem;
+              font-weight: 300;
+              line-height: 1.5rem;
+              max-width: 20rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .app__abouts {
+      padding: 2rem;
+    }
+  
+    .app__abouts-card {
+      .app__abouts-cards {
+        .app__abouts-details {
+          gap: 1.5rem;
+  
+          .about-image {
+            width: 20rem;
+          }
+  
+          .about-details {
+            h2 {
+              font-size: 1.5rem;
+            }
+  
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .app__abouts {
+      padding: 1.5rem;
+    }
+  
+    .app__abouts-card {
+      .app__abouts-cards {
+        flex-direction: column;
+        align-items: center;
+  
+        .app__abouts-details {
+          gap: 1rem;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+  
+          .about-image {
+            width: 100%;
+          }
+  
+          .about-details {
+            h2 {
+              font-size: 1.25rem;
+            }
+  
+            p {
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .app__abouts {
+      padding: 1rem;
+    }
+  
+    .app__abouts-card {
+      .app__abouts-cards {
+        .app__abouts-details {
+          .about-image {
+            width: 100%;
+          }
+  
+          .about-details {
+            h2 {
+              font-size: 1rem;
+            }
+  
+            p {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  
