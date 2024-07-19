@@ -33,7 +33,7 @@ const Rooms = () => {
   return (
     <div className="app__rooms">
       <h2 className="app__rooms-title"> Our Exquisite Suites</h2>
-      <p>Elevate your travel experience when you step into one of our show-stopping suites</p>
+      <p className="app__rooms-intro">Elevate your travel experience when you step into one of our show-stopping suites</p>
       {roomStatus === 'loading' && <p>Loading...</p>}
       {roomError && <p>Error: {roomError}</p>}
       <motion.div

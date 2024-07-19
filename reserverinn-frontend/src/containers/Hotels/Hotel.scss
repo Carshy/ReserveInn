@@ -10,9 +10,15 @@
   overflow-y: hidden;
 
   .app__hotels-title {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
     font-size: 3rem;
     font-weight: 800;
+  }
+
+  .app__hotels-intro {
+    @media screen and (max-width: 750px) {
+      text-align: center;
+    }
   }
 
   .app__hotels-card {
@@ -44,7 +50,7 @@
       background: transparent; /* Background of the scrollbar track */
     }
 
-    ul {
+    .app__hotels-cards {
       display: flex;
       flex-direction: column;
 

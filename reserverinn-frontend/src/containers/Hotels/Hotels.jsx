@@ -19,15 +19,16 @@ const Hotels = () => {
   return (
     <div className="app__hotels" id="hotels">
       <h2 className="app__hotels-title">Destinations</h2>
-      <p>Explore the World with Reserve Inn. Where are you Travelling Next?</p>
+      <p className="app__hotels-intro">Explore the World with Reserve Inn. Where are you Travelling Next?</p>
       {hotelStatus === 'loading' && <p>Loading...</p>}
       {hotelError && <p>Error: {hotelError}</p>}
       <div className="app__hotels-card">
         {hotels.map((hotel) => (
-          <motion.ul
+          <motion.div
             key={hotel.id}
+            className="app__hotels-cards"
           >
-            <motion.li 
+            <motion.div 
               className="app__hotels-details"
               whileInView={{ opacity: [0, 1] }}
               transition={{
@@ -39,8 +40,8 @@ const Hotels = () => {
               <h2>{hotel.name}</h2>
               <p>{hotel.location}</p>
               <p>{hotel.description}</p>
-            </motion.li>
-          </motion.ul>
+            </motion.div>
+          </motion.div>
         ))}
       </div>
     </div>
