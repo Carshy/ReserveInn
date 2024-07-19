@@ -2,8 +2,8 @@
 
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .models import Location, Hotel, Room, Booking
-from .serializers import LocationSerializer, HotelSerializer, RoomSerializer, BookingSerializer
+from .models import Location, Hotel, Room, Booking, About
+from .serializers import LocationSerializer, HotelSerializer, RoomSerializer, BookingSerializer, AboutSerializer
 from .permissions import IsAdminOrReadOnly, IsAuthenticatedAndOwner
 
 class LocationViewSet(viewsets.ModelViewSet):
@@ -31,3 +31,8 @@ class BookingViewSet(viewsets.ModelViewSet):
         else:
             self.permission_classes = [IsAuthenticatedAndOwner]
         return super().get_permissions()
+
+class AboutViewSet(viewsets.ModelViewSet):
+    queryset = About.objects.all()
+    serializer_class = AboutSerializer
+    permission_classes = [IsAdminOrReadOnly]

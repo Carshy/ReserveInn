@@ -41,6 +41,8 @@ class Room(models.Model):
         ('Suite', 'Suite'),
     ]
     hotel = models.ForeignKey(Hotel, related_name='rooms', on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='hotel_photos/', blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
     room_type = models.CharField(max_length=50, choices=ROOM_TYPE_CHOICES)
     room_number = models.CharField(max_length=10)
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -62,3 +64,14 @@ class Booking(models.Model):
 
     def __str__(self):
         return f'Booking {self.id} by {self.user.username}'
+
+class About(models.Model):
+    title = models.CharField(max_length=100)
+    hotel = models.OneToOneField(Hotel, on_delete=models.CASCADE)
+    photo = models.ImageField(upload_to='hotel_photos/', blank=True, null=True)
+    description = models.TextField()
+    created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title
