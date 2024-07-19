@@ -2,6 +2,7 @@ import React from 'react';
 import HomeSlider from './HomeSlider';
 import Hotels from '../Hotels/Hotels';
 import Rooms from '../Rooms/Rooms';
+import Experience from './Experience';
 import './Home.scss';
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
       <HomeSlider />
       <Hotels />
       <Rooms />
+      <Experience />
     </div>
   );
 }

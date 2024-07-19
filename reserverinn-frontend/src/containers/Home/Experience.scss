@@ -1,0 +1,28 @@
+.app__experience {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 4rem 5rem 4rem;
+  gap: 2rem;
+  background-color: rgb(248 246 240);
+
+  .app__experience-details {
+    h2 {
+      padding-bottom: 2.4rem;
+    }
+
+    p{
+      padding-bottom: 2rem;
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  .app__experience-image {
+    width: 55rem;
+
+    img {
+      width: 100%;
+    }
+  }
+}

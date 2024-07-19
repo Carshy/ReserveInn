@@ -16,6 +16,7 @@ import kemp2 from '../assets/videos/kemp2.mp4';
 import kemp4 from '../assets/videos/kemp4.mp4';
 import kemp5 from '../assets/videos/kemp5.mp4';
 import kemp6 from '../assets/videos/kemp6.mp4';
+import kempi from '../assets/kempi.jpg';
 
 export default {
   logo,
@@ -36,4 +37,5 @@ export default {
   kemp4,
   kemp5,
   kemp6,
+  kempi,
 };

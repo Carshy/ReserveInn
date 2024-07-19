@@ -12,17 +12,7 @@
   position: fixed;
   z-index: 10;
   background: transparent;
-
-  // position: sticky;
   top: 0px;
-
-  // header {
-  //   display: flex;
-  //   align-items: center;
-  //   width: 100%;
-  //   max-width: var(--max-content-width);
-  //   padding: 1rem;
-  // }
 
   .app__navbar-logo {
     display: flex;
@@ -76,13 +66,68 @@
 }
 
 .nav__container.fixed {
-  // background: #333;
-  // background-color: #15023a;
   background: #fff;
-  // backdrop-filter: blur(4px);
   transition: all 0.7s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 3;
+  z-index: 10;
+
+  .app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      color: #000;
+      font-weight: 600;
+    }
+  }
+
+  .app__navbar-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  
+    li {
+      cursor: pointer;
+      flex-direction: column;
+      margin: 0 1rem;
+  
+      div {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: transparent;
+        margin-bottom: 5px;
+      }
+  
+      a {
+        color: #000;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: all 0.4s ease-in-out;
+  
+        &:hover {
+          color: #000;
+          transform: scale(1.2);
+          // font-weight: 600;
+        }
+      }
+  
+      &:hover {
+        div {
+          background-color: #000;
+          transform: scale(1.2);
+          // font-weight: 600;
+        }
+      }
+    }
+  
+    @media screen and (max-width: 850px) {
+      display: none;
+    }
+  }
 }
 
 .app__navbar-links {
@@ -105,7 +150,6 @@
     }
 
     a {
-      color: var(--white-color);
       color: #fff;
       flex-direction: column;
       text-transform: uppercase;
@@ -113,7 +157,7 @@
       transition: all 0.4s ease-in-out;
 
       &:hover {
-        color: rgb(234, 92, 0);
+        color: #000;
         transform: scale(1.2);
         // font-weight: 600;
       }
@@ -122,7 +166,7 @@
     &:hover {
       div {
         background: var(--lightGray-color);
-        background-color: rgb(234, 92, 0);
+        background-color: #000;
         transform: scale(1.2);
         // font-weight: 600;
       }
