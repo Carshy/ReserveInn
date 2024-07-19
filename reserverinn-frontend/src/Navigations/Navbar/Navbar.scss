@@ -77,7 +77,7 @@
     align-items: center;
 
     h2 {
-      color: #000;
+      color: rgb(2 16 42);
       font-weight: 600;
     }
   }
@@ -102,14 +102,14 @@
       }
   
       a {
-        color: #000;
+        color: rgb(2 16 42);
         flex-direction: column;
         text-transform: uppercase;
         font-weight: 500;
         transition: all 0.4s ease-in-out;
   
         &:hover {
-          color: #000;
+          color: rgb(234, 92, 0);
           transform: scale(1.2);
           // font-weight: 600;
         }
@@ -117,7 +117,7 @@
   
       &:hover {
         div {
-          background-color: #000;
+          background-color: rgb(234, 92, 0);
           transform: scale(1.2);
           // font-weight: 600;
         }
@@ -157,7 +157,7 @@
       transition: all 0.4s ease-in-out;
 
       &:hover {
-        color: #000;
+        color: rgb(234, 92, 0);
         transform: scale(1.2);
         // font-weight: 600;
       }

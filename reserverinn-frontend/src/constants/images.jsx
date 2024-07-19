@@ -17,6 +17,7 @@ import kemp4 from '../assets/videos/kemp4.mp4';
 import kemp5 from '../assets/videos/kemp5.mp4';
 import kemp6 from '../assets/videos/kemp6.mp4';
 import kempi from '../assets/kempi.jpg';
+import shakes from '../assets/shakes.svg';
 
 export default {
   logo,
@@ -38,4 +39,5 @@ export default {
   kemp5,
   kemp6,
   kempi,
+  shakes
 };
