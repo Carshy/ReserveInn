@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,7 +36,13 @@ const Rooms = () => {
       <p>Elevate your travel experience when you step into one of our show-stopping suites</p>
       {roomStatus === 'loading' && <p>Loading...</p>}
       {roomError && <p>Error: {roomError}</p>}
-      <div className="app__slider">
+      <motion.div
+        className="app__slider"
+        initial={{ width: '94%' }}
+        whileHover={{ width: '100' }}
+        transition={{ duration: 0.5 }}
+        // whileInView={{ opacity:[0.4, 1], scale:[0, 1] }}
+      >
         <Slider {...settings} className="slider">
           {rooms.map((room) => (
             <div key={room.id} className="slide">
@@ -46,7 +53,7 @@ const Rooms = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </motion.div>
     </div>
   );
 };

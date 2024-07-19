@@ -4,10 +4,10 @@
   justify-content: center;
   align-items: center;
   padding-top: 4rem;
-  width: 96%;
-  flex-wrap: wrap;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  width: 100%;
+  // flex-wrap: wrap;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
 
   .app__rooms-title {
     font-family: "Playfair Display", serif;
@@ -16,7 +16,10 @@
   }
 
   .app__slider {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 94%;
   }
 
   .slider {
