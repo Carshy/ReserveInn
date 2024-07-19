@@ -39,10 +39,10 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/books"
+              to="/abouts"
               onClick={() => setNavActive(false)}
             >
-              Search for Books
+              About Us
             </NavLink>
           </li>
         </ul>
