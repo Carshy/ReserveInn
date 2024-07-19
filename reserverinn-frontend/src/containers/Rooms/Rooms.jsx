@@ -39,7 +39,7 @@ const Rooms = () => {
       <motion.div
         className="app__slider"
         initial={{ width: '94%' }}
-        whileHover={{ width: '100' }}
+        whileHover={{ width: '100%' }}
         transition={{ duration: 0.5 }}
         // whileInView={{ opacity:[0.4, 1], scale:[0, 1] }}
       >
